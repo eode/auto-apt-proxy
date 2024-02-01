@@ -2,6 +2,11 @@
 
 auto-apt-proxy - autodetect common APT proxy setups
 
+## NOTE
+This specific version uses MDNS to automatically recognize (for example)
+`squid-deb-proxy` and `apt-cacher-ng`.  If the changes are merged upstream and
+pulled into debian, I'll delete or archive this repository. 
+
 # USAGE
 
 **auto-apt-proxy**
