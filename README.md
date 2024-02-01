@@ -3,9 +3,19 @@
 auto-apt-proxy - autodetect common APT proxy setups
 
 ## NOTE
-This specific version uses MDNS to automatically recognize (for example)
-`squid-deb-proxy` and `apt-cacher-ng`.  If the changes are merged upstream and
-pulled into debian, I'll delete or archive this repository. 
+This specific version uses MDNS via `avahi-utils` to automatically recognize 
+(for example) `squid-deb-proxy` and `apt-cacher-ng`.  If the changes are 
+merged upstream and pulled into debian, I'll delete or archive this repository. 
+
+MDNS is not *required*, but if `avahi-browse` from the `avahi-utils` package
+is present, it will be used to query MDNS for available apt caches.
+
+### MDNS / Avahi Usage
+ * Install `auto-apt-proxy` from this repository.
+ * Install the `avahi-utils` package.
+ * Install `apt-cacher-ng` or `squid-deb-proxy` on the server/system you want
+   to host the cache.
+ * Enjoy.
 
 # USAGE
 
